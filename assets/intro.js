@@ -12,6 +12,8 @@ function run() {
   let seen = false;
   try { seen = sessionStorage.getItem('qv-intro') === '1'; } catch (e) {}
   if (seen || location.hash) { intro.hidden = true; return; }
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.scrollTo({ top: 0, behavior: 'instant' });
   document.documentElement.style.overflow = 'hidden';
 
   const canvas = intro.querySelector('canvas');
@@ -224,8 +226,8 @@ function run() {
     try { sessionStorage.setItem('qv-intro', '1'); } catch (e) {}
     intro.hidden = true;
     document.documentElement.style.overflow = '';
-    scrollTo(0, 0);
-    requestAnimationFrame(() => fade && fade.classList.remove('on'));
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    requestAnimationFrame(() => { window.scrollTo({ top: 0, behavior: 'instant' }); if (fade) fade.classList.remove('on'); });
     if (renderer) renderer.dispose();
   }
 }
