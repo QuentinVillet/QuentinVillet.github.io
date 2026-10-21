@@ -125,7 +125,7 @@ PROJECTS = [
 ]
 TOOLS = [("python", "Python"), ("pytorch", "PyTorch"), ("huggingface", "Hugging Face"), ("scikitlearn", "scikit-learn"),
          ("pandas", "pandas"), ("databricks", "Databricks"), ("googlebigquery", "BigQuery"), ("googlecloud", "Google Cloud"),
-         ("docker", "Docker"), ("fastapi", "FastAPI"), ("swift", "Swift"), ("claude", "Claude Code")]
+         ("docker", "Docker"), ("fastapi", "FastAPI"), ("postgresql", "PostgreSQL"), ("claude", "Claude Code")]
 
 
 def logo(item, up="", cls="logo"):
@@ -352,15 +352,9 @@ studies = f"""
 </div></section>
 <section class="sec alt"><div class="wrap skillsets">
   <div class="head right" style="margin-bottom:0"><p class="label">what I can do</p><h2>Skills</h2></div>
-  <div><h3>Programming</h3>{tools_grid([("python","Python"),(None,"SQL"),("cplusplus","C++"),("r","R"),("swift","Swift"),(None,"Stata")]).replace('<span data-icon="None"></span>','')}</div>
-  <div><h3>Machine learning</h3>{tools_grid([("pytorch","PyTorch"),("tensorflow","TensorFlow"),("scikitlearn","scikit-learn"),("huggingface","Hugging Face"),("opencv","OpenCV"),("ollama","Ollama"),("pandas","pandas"),("numpy","NumPy")])}</div>
+  <div><h3>Programming</h3>{tools_grid([("python","Python"),(None,"SQL"),("cplusplus","C++"),("r","R"),(None,"Stata")]).replace('<span data-icon="None"></span>','')}</div>
+  <div><h3>Machine learning</h3>{tools_grid([("pytorch","PyTorch"),("tensorflow","TensorFlow"),("scikitlearn","scikit-learn"),("huggingface","Hugging Face"),("opencv","OpenCV"),("ollama","Ollama"),("pandas","pandas"),("numpy","NumPy"),("claude","Claude Code")])}</div>
   <div><h3>Data and cloud</h3>{tools_grid([("databricks","Databricks"),("googlebigquery","BigQuery"),("googlecloud","Google Cloud"),("postgresql","PostgreSQL"),("docker","Docker"),("fastapi","FastAPI"),("streamlit","Streamlit"),("looker","Looker Studio")])}</div>
-  <div><h3>Building with AI</h3><div class="ai">
-    <div><code>Claude Code</code><p>What I use to prototype quickly, including this website.</p></div>
-    <div><code>frontend-design</code><p>For interfaces that don't look like templates.</p></div>
-    <div><code>design-critique</code><p>For honest feedback on a layout before shipping it.</p></div>
-    <div><code>accessibility-review</code><p>For checking contrast and keyboard use.</p></div>
-  </div></div>
 </div></section>
 <section class="sec"><div class="wrap">
   <div class="head"><p class="label">how I talk</p><h2>Languages</h2></div>
